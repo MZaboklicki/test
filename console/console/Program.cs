@@ -15,7 +15,12 @@ namespace console
             //ciekawostki
 
             //Wykorzystanie okienka w aplikacji konsolowej
-           // MessageBox.Show("hello");
+            //MessageBox.Show("hello");
+            //Odczytywanie zmiennych środowiskowych / specjalnych folderów   Klasa Environment np:
+            string folder = Environment.GetFolderPath(Environment.SpecialFolder.History);
+            
+
+            Console.ReadKey();
         }
     }
 }
