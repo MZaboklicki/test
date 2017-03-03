@@ -20,7 +20,12 @@ namespace console
            // zm2 = "abc";
           //Console.WriteLine(zm2.GetType());
 
+            ///is sprawdza czy objekt jest danego typu np bool odp = obj is Exception;
+            ///as sprawia, że jakiś obj jest traktowany jako obj innej klasy, ale zadziała tylko jeżeli jest to jakaś klas na której bazuje
             
+            ///leniwa inicjacja Lazy<int> li = new Lazy<int>(()=>1) w nawiasie wyrażenie lambda 
+
+
             ///wyjątki
             //int a=0;
             // int x = checked(int.MaxValue +1);  checked sprawdza, czy został przekoczony zakres int
