@@ -12,6 +12,22 @@ namespace console
         static void Main(string[] args)
         {
 
+
+
+            ///wyjątki
+            //int a=0;
+            //try
+            //{
+            //    Console.WriteLine("Podaj a: ");
+            //    a = Convert.ToInt16(Console.ReadLine());
+
+            //}
+            //catch(Exception ex)
+            //{
+            //    Console.WriteLine("a musi być liczbą");
+            //    a = 1;
+            //}
+            //Console.WriteLine(a);
             //ciekawostki
 
             //Wykorzystanie okienka w aplikacji konsolowej
