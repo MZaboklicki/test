@@ -7,19 +7,7 @@ using System.Threading.Tasks;
 
 namespace console
 {
-    class Klasa
-    {
-        public delegate void del(string wiadomosc);
-        public del zwykly_del;
-        public event del zdarzenie_del;
-        public void Metoda_delegacja()
-        {
-            if (zwykly_del != null)
-                zwykly_del("Zwykły delegate...");
-            if (zdarzenie_del != null)
-                zdarzenie_del("Event delegate...");
-        }
-    }
+    
     class Program
     {
         static private void objekt_metodazakonczona(string wiadomosc)
@@ -30,23 +18,62 @@ namespace console
         {
 
             ///delegate, events
-            Klasa obj = new Klasa();
+            Klasa_del obj = new Klasa_del();
             //subskrypcje
             obj.zwykly_del = objekt_metodazakonczona;
             obj.zdarzenie_del += objekt_metodazakonczona;
             obj.Metoda_delegacja();
 
+            ///typy parametryczne
+            int a = 5;
+            int b = 10;
+            Para<int, int> para1 = new Para<int,int>(a,b);
+            para1.Print();
+
+            Random rand = new Random();
+            Para<int, int>[] tab_para1 = new Para<int, int>[10];    
+            for(int i=0; i<tab_para1.Length; i++)
+            {
+                tab_para1[i] = new Para<int, int>(rand.Next(10,200), rand.Next(10,200));
+            }
+            for(int i=0; i<tab_para1.Length; i++)
+            {
+                tab_para1[i].Print();
+            }
+            Para<string, int>[] tab_para2 = new Para<string, int>[5];
+            tab_para2[0] = new Para<string, int>("Tomek", 3);
+            tab_para2[1] = new Para<string, int>("Marek", 2);
+            tab_para2[2] = new Para<string, int>("Jacek", 16);
+            tab_para2[3] = new Para<string, int>("Tomek", 9);
+            tab_para2[4] = new Para<string, int>("Kuba", 1);
+            foreach(Para<string,int> zm in tab_para2)
+            {
+                zm.Print();
+            }
+            Console.WriteLine("SORTOWANIE");
+            Array.Sort(tab_para1);
+            Array.Sort(tab_para2);
+            foreach (Para<int,int> zm in tab_para1)
+            {
+                zm.Print();
+            }
+            foreach (Para<string, int> zm in tab_para2)
+            {
+                zm.Print();
+            }
+
+
             ///zmienne var i dynamic
             //var zm1 = 1L;
             //Console.WriteLine(zm1.GetType());
-           // dynamic zm2 = 15;
-           // Console.WriteLine(zm2.GetType());
-           // zm2 = "abc";
-          //Console.WriteLine(zm2.GetType());
+            // dynamic zm2 = 15;
+            // Console.WriteLine(zm2.GetType());
+            // zm2 = "abc";
+            //Console.WriteLine(zm2.GetType());
 
             ///is sprawdza czy objekt jest danego typu np bool odp = obj is Exception;
             ///as sprawia, że jakiś obj jest traktowany jako obj innej klasy, ale zadziała tylko jeżeli jest to jakaś klas na której bazuje
-            
+
             ///leniwa inicjacja Lazy<int> li = new Lazy<int>(()=>1) w nawiasie wyrażenie lambda 
 
 
