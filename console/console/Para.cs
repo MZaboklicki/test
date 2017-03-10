@@ -23,6 +23,8 @@ namespace console
         {
             Console.WriteLine(zm1.ToString() + "  " + zm2.ToString());
         }
+
+        //Metoda do porównywania, wymagana by interfejs IComparable działał
         public int CompareTo(Para<A,B> innapara)
         {
             int wynik = this.zm1.CompareTo(innapara.zm1);
