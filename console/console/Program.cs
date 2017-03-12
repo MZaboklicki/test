@@ -113,6 +113,51 @@ namespace console
 
             //Zad3
             //Zad3.Tax(30001);
+
+            //Zad4
+            //for(int i=0; i<4; i++)
+            //{
+            //    for (int j = i; j < 4; j++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    for (int j = 0; j < i; j++)
+            //        Console.Write(" ");
+
+            //    Console.Write(" ");
+            //    for (int j = 5+i; j > 1+i; j--)
+            //    {
+            //        Console.Write(j);
+            //    }
+            //    Console.Write(" ");
+            //    for (int j = 0; j < 6; j++)
+            //    {
+            //        if(i%2==0 && j%2==0)
+            //        {
+            //            Console.Write("1");
+            //        }
+            //        else if(i % 2 == 1 && j % 2 == 1)
+            //        {
+            //            Console.Write("1");
+            //        }
+            //        else
+            //        {
+            //            Console.Write("2");
+            //        }
+
+            //    }
+            //    Console.Write(" ");
+
+            //    for (int j = i; j <= i+3; j++)
+            //    {
+            //        for (int k = 0; k < j; k++)
+            //        {
+            //            Console.Write(j);
+            //        }
+            //    }
+            //    Console.WriteLine();
+            //}
+
             Console.ReadKey();
         }
     }
