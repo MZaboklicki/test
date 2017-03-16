@@ -51,6 +51,7 @@
     <Compile Include="zad1.cs" />
     <Compile Include="zad2.cs" />
     <Compile Include="Zad3.cs" />
+    <Compile Include="Zad6.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

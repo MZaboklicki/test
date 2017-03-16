@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms; //okienkowość, wymagania dodania dll w references
 using System.Collections.Generic;
 using System.Linq;
@@ -158,7 +159,144 @@ namespace console
             //    Console.WriteLine();
             //}
 
-            Console.ReadKey();
+            //ZAD5
+            //Random rand = new Random();
+            //int x;
+            //int odp = 0;
+            //do
+            //{
+            //    x = rand.Next(0, 10);
+            //    Console.Write(x+"Podaj liczbe: ");
+            //    odp = Convert.ToInt32(Console.ReadLine());
+            //} while (odp != x);
+
+            //Zad6
+            //Zad6 cityA = new Zad6(100000f, 0.03f);
+            //Zad6 cityB = new Zad6(300000f, 0.02f);
+            //int year = 0;
+            //while(cityA.Population < cityB.Population)
+            //{
+            //    cityA.Grow();
+            //    cityB.Grow();
+            //    year++;
+            //}
+            //Console.WriteLine("After " + year + " years, population of City A: " + cityA.Population + "    population of City B: " + cityB.Population);
+
+            //Zad2.2 odczyt pliku
+            //Console.Write("Podaj ścieżkę do pliku txt: ");
+            //string path = "D:\\Patronage 2017\\test\\console\\console\\Program.cs";
+            ////  path = Console.ReadLine();
+            //if (File.Exists(path))
+            //{
+            //    FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read); //handler typu filestream
+            //                                                                            // Console.WriteLine("Znaleziono plik");
+            //    StreamReader reader = new StreamReader(file); //handler typu streamreader
+            //                                                  //string text = reader.ReadToEnd(); //odczyt całości
+            //                                                  //List<string> sentence = new List<string>(0);
+            //                                                  //while (!reader.EndOfStream)
+            //                                                  //{
+            //                                                  //    sentence.Add(reader.ReadLine());
+
+            //    //}
+            //    //List<string[]> words = new List<string[]>(0);
+            //    //char delimiter = ' ';
+            //    //foreach (string word in sentence)
+            //    //{
+            //    //    words.Add(word.Split(delimiter));
+            //    //}
+            //    //foreach (string[] word in words)
+            //    //{
+            //    //    for (int i = 0; i < word.Length; i++)
+            //    //    {
+            //    //        ConsoleColor kolor = Console.ForegroundColor;
+            //    //        if (word[i] == "for" || word[i] == "while" || word[i] == "if" || word[i] == "else")
+            //    //            Console.ForegroundColor = ConsoleColor.Blue;
+            //    //        Console.Write(word[i] + " ");
+            //    //        Console.ForegroundColor = kolor;
+            //    //    }
+            //    //}
+            //    //foreach (string word in sentence)
+            //    //{
+            //    //    Console.WriteLine(word);
+            //    //}
+            //    // Console.Write(text);
+            //    string sentence;
+            //    string[] words;
+            //    while (!reader.EndOfStream)
+            //    {
+            //        sentence=(reader.ReadLine());
+            //        words = sentence.Split(' ');
+            //        foreach(string word in words)
+            //        {
+
+            //            ConsoleColor kolor = Console.ForegroundColor;
+            //            if (word == "for" || word == "while" || word == "if" || word == "else")
+            //                Console.ForegroundColor = ConsoleColor.Blue;
+            //            Console.Write(word + " ");
+            //            Console.ForegroundColor = kolor;
+
+            //        }
+            //        Console.WriteLine();
+
+            //    }
+            //    reader.Close();
+            //    file.Close();
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Nie znaleziono pliku.");
+            //}
+
+            //Zad2.4
+            //SortedList<string, string> slownik = new SortedList<string, string>(0);
+            //slownik.Add("jest", "is");
+            //slownik.Add("ma", "has");
+            //slownik.Add("lubi", "likes");
+            //slownik.Add("oglądać", "to watch");
+            //slownik.Add("kota", "cat");
+            //slownik.Add("włosy", "hair");
+            //slownik.Add("filmy", "movies");
+            //slownik.Add("bardzo", "very");
+            //slownik.Add("rudy", "red");
+            //slownik.Add("rude", "red");
+            //slownik.Add("wysoki", "tall");
+            //string[] zdania = new string[5];
+            //zdania[0] = "Ala ma kota";
+            //zdania[1] = "Bartek jest bardzo wysoki";
+            //zdania[2] = "Kasia ma rude włosy";
+            //zdania[3] = "Karolina lubi oglądać filmy";
+            //zdania[4] = "Jacek lubi C#";
+            //string[] zdanie;
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.WriteLine(zdania[i]);
+            //    zdanie = zdania[i].Split(' ');
+            //    for (int j = 0; j <zdanie.Length; j++)
+            //    {
+            //        string nowy;
+            //        if (slownik.TryGetValue(zdanie[j], out nowy))
+            //            zdanie[j] = nowy;
+            //            Console.Write(zdanie[j]+" ");
+            //    }
+
+            //    Console.WriteLine();
+            //}
+
+            //ZAD 2.5 LINQ
+            //string[] tablica = {"czereśnia","jabłko","borówka","wiśnia","jagoda","grószka","śliwka","malina" };
+            //Console.WriteLine("Najkrótsza długość słowa: "+tablica.Min(slowo =>slowo.Length));
+            //Console.WriteLine("Najdłoższa długość słowa: " + tablica.Max(slowo => slowo.Length));
+            //Console.WriteLine("Średnia długość słowa: " + tablica.Average(slowo => slowo.Length));
+            //Console.WriteLine("Całkowita ilość liter: " + tablica.Sum(slowo => slowo.Length));
+
+            //var tab2 =(tablica.Select(slowo=>slowo));
+            //foreach(string element in tab2)
+            //{
+            //    Console.WriteLine(element.ToUpper() + " ");
+            //}
+            //Console.ReadKey();
+            
+            
         }
     }
 }
