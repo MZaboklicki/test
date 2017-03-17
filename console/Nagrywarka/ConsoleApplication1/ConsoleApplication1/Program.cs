@@ -11,8 +11,11 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             Nagrywarka nag = new Nagrywarka();
-           
-            Console.WriteLine(nag.MiejsceNagrywania);
+            NagrywarkaZPamiecia nagZPam = new NagrywarkaZPamiecia();
+            nagZPam.DodajNagranie();
+            nagZPam.DodajNagranie();
+            nagZPam.DodajNagranie();
+            nagZPam.WyswietlNagrania();
             Console.ReadKey();
         }
     }

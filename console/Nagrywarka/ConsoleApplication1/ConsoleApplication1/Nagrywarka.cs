@@ -23,33 +23,33 @@ namespace ConsoleApplication1
             get { return aktualneMiejsce; }
             set { aktualneMiejsce = value; }
         }
-        void Włącz()
+        public void Włącz()
         {
             if (aktualnyStan == 0)
                 aktualnyStan = (int)stan.Zatrzymanie;
             else
                 Console.WriteLine("Nagrywarak jest już włączona");
         }
-        void Odtwarzaj()
+        public void Odtwarzaj()
         {
             if (aktualnyStan == 1)
                 aktualnyStan = (int)stan.Odtwarzanie;
             else
-                Console.WriteLine("Nie można w tej chwili nic nagrać");
+                Console.WriteLine("Nie można w tej chwili nic odtworzyc");
         }
-        void Nagrywaj()
+        public void Nagrywaj()
         {
             if (aktualnyStan == 1)
                 aktualnyStan = (int)stan.Nagrywanie;
             else
-                Console.WriteLine("Nie można w tej chwili nic odtworzyc");
+                Console.WriteLine("Nie można w tej chwili nic nagrać");
         }
-        void Zatrzymaj()
+        public void Zatrzymaj()
         {
             if (aktualnyStan == 2 || aktualnyStan==3)
                 aktualnyStan = (int)stan.Zatrzymanie;
             else
-                Console.WriteLine("Nagrywarka zatrzymana, lub wyłączona");
+                Console.WriteLine("Nagrywarka już zatrzymana, lub wyłączona");
         }
         public void AktualnyStan()
         {
