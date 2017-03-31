@@ -15,21 +15,20 @@ namespace form1
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void trackBar2_Scroll(object sender, EventArgs e)
-        {
-
+            this.trackBar1_Scroll(this, null);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-
+            panel1.BackColor = Color.FromArgb(trackBar1.Value, trackBar2.Value, trackBar3.Value);
         }
 
-        private void trackBar3_Scroll(object sender, EventArgs e)
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (e.KeyChar == '\u001B')   //\u001B = esc
+            {
+                this.Close();
+            }
         }
     }
 }
