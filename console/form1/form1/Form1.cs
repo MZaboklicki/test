@@ -25,7 +25,7 @@ namespace form1
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == '\u001B')   //\u001B = esc
+            if (e.KeyChar == '\u001B')   //\u001B = esc
             {
                 this.Close();
             }
